@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Sen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sen Regular'), local('Sen-Regular'), url(https://fonts.gstatic.com/s/sen/v1/6xKjdSxYI9_3nPWI.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/
 	v2.0 | 20110126
 	License: none (public domain)
@@ -145,9 +152,8 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   width: 80%;
-  padding: 2%;
+  padding: 0.5%;
   border-bottom: 2px solid black;
 }
 header nav a {
@@ -155,8 +161,26 @@ header nav a {
   padding: 1% 1%;
   text-decoration: none;
   color: black;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   border: 2px solid black;
   border-radius: 2rem;
+}
+.top-container {
+  display: flex;
+  justify-content: center;
+}
+.top-container .top-content {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Sen', sans-serif;
+  width: 80%;
+  background-color: #d3d3d3;
+}
+.top-container .top-content h1 {
+  align-self: center;
+  font-size: 15rem;
+  text-align: center;
+  padding: 2%;
+  width: 80%;
 }

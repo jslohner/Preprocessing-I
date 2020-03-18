@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/
 	v2.0 | 20110126
@@ -72,9 +74,8 @@ header {
 	nav {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
 		width: 80%;
-		padding: 2%;
+		padding: 0.5%;
 		border-bottom: 2px solid black;
 
 		// links in nav bar
@@ -83,10 +84,37 @@ header {
 			padding: 1% 1%;
 			text-decoration: none;
 			color: black;
-			font-size: 3rem;
+			font-size: 2rem;
 			text-align: center;
 			border: 2px solid black;
 			border-radius: 2rem;
-		} // bracket closing a tags
-	} // bracket closing nav bar
-}
+		} // a tags closing bracket
+	} // nav bar closing bracket
+} // header closing bracket
+
+// top-container
+.top-container {
+	display: flex;
+	justify-content: center;
+
+	// top-content
+	.top-content {
+		display: flex;
+		flex-direction: column;
+		font-family: 'Sen', sans-serif;
+		// font-size: 5rem;
+		width: 80%;
+		// padding: 5% 0%;
+		background-color: rgb(211, 211, 211, 0.3);
+
+		// h1 Justin Lohner
+		h1 {
+			align-self: center;
+			// align-self: flex-start;
+			font-size: 15rem;
+			text-align: center;
+			padding: 2%;
+			width: 80%;
+		}
+	} // top-content closing bracket
+} // top-container closing bracket
