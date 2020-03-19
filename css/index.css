@@ -208,3 +208,28 @@ header nav a {
   text-align: center;
   line-height: 1.7;
 }
+.middle-container {
+  display: flex;
+  justify-content: center;
+}
+.middle-container .middle-content {
+  display: flex;
+  font-family: 'Sen', sans-serif;
+  font-size: 3rem;
+  width: 80%;
+  padding-top: 1%;
+}
+.middle-container .middle-content .skills {
+  border-right: 2px solid #4169E1;
+}
+.middle-container .middle-content .work {
+  border-left: 2px solid #4169E1;
+}
+.middle-container .middle-content h2 {
+  font-size: 5rem;
+  border-bottom: 4px solid #4169E1;
+  margin-bottom: 2rem;
+}
+.middle-container .middle-content div {
+  padding: 0% 2% 2% 2%;
+}
