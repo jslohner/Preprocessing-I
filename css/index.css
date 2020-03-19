@@ -271,8 +271,9 @@ header nav a button:hover {
 }
 @media (max-width: 500px) {
   .middle-container .middle-content {
-    width: 100%;
     font-size: 1.5rem;
+    width: 80%;
+    padding-top: 4%;
   }
 }
 footer {
@@ -285,17 +286,39 @@ footer .contact-header {
   width: 80%;
   padding: 2% 1%;
 }
+footer .contact-info {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+  font-family: 'Sen', sans-serif;
+  font-size: 4rem;
+  padding: 1%;
+}
+footer .contact-info p {
+  padding: 2% 0%;
+}
+@media (max-width: 500px) {
+  footer .contact-info p {
+    font-size: 1.6rem;
+  }
+}
 footer .contact-form {
   width: 80%;
   font-family: 'Sen', sans-serif;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 4rem;
-  padding: 5%;
+  padding: 1%;
+  padding-bottom: 5%;
+  max-width: 100%;
+}
+footer .contact-form div {
+  max-width: 100%;
 }
 @media (max-width: 500px) {
   footer .contact-form {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    padding: 4%;
   }
 }
 footer h2 {
@@ -307,4 +330,20 @@ footer h2 {
   footer h2 {
     font-size: 2rem;
   }
+}
+footer input {
+  color: #4169E1;
+  font-size: 4rem;
+  border: 2px solid black;
+  width: 80%;
+}
+@media (max-width: 500px) {
+  footer input {
+    font-size: 1.6rem;
+    padding: 4%;
+  }
+}
+footer ::placeholder {
+  color: #4169E1;
+  opacity: 1;
 }

@@ -242,8 +242,9 @@ header {
 		} // middle content p closing bracket
 
 		@media( max-width: 500px ) {
-			width: 100%;
 			font-size: 1.5rem;
+			width: 80%;
+			padding-top: 4%;
 		}
 	} // middle content closing bracket
 } // middle container closing bracket
@@ -260,16 +261,40 @@ footer {
 
 	} // contact section closing bracket
 
+	// developer contact info
+	.contact-info {
+		.column();
+		.initialize-section();
+		font-size: 4rem;
+		padding: 1%;
+
+		// contact info paragraph
+		p {
+			padding: 2% 0%;
+
+			@media( max-width: 500px ) {
+				font-size: 1.6rem;
+			}
+		} // contact info paragraph closing bracket
+	} // developer contact info closing bracket
+
 	.contact-form {
 		.initialize-section();
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		font-size: 4rem;
-		padding: 5%;
+		padding: 1%;
+		padding-bottom: 5%;
+		max-width: 100%;
+
+		// contact form div
+		div {
+			max-width: 100%;
+		} // contact form div closing bracket
 
 		@media( max-width: 500px ) {
-			font-size: 1.5rem;
-		}
+			font-size: 1.6rem;
+			padding: 4%;}
 	}
 
 	// footer h2
@@ -283,5 +308,21 @@ footer {
 		}
 	} // h2 closing tag
 
+	// input
+	input {
+		color: @main-color;
+		font-size: 4rem;
+		border: 2px solid black;
 
+		@media( max-width: 500px ) {
+			font-size: 1.6rem;
+			padding: 4%;}
+			width: 80%;
+	} // input closing bracket
+
+	// input placeholder text
+	::placeholder {
+		color: @main-color;
+		opacity: 1;
+	} // placeholder text closing bracket
 } // footer closing bracket
