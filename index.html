@@ -17,14 +17,14 @@
 
 		<header>
 			<nav>
-				<a href="#">Home</a>
-				<a href="#">About</a>
-				<a href="#">Portfolio</a>
-				<a href="#">Contact</a>
+				<a href="index.html"><button type="button" name="home">Home</button></a>
+				<a href="#about"><button type="button" name="about">About</button></a>
+				<a href="https://jslohner.github.io/portfolio-website/"><button type="button" name="portfolio">Portfolio</button></a>
+				<a href="#contact"><button type="button" name="contact">Contact</button></a>
 			</nav>
 		</header>
 
-		<div class="top-container">
+		<div class="top-container" id="about">
 			<div class="top-content">
 				<h1>Justin Lohner</h1>
 				<div class="intro">
@@ -49,7 +49,9 @@
 		</div>
 
 		<footer>
-			<h2>Contact</h2>
+			<div class="contact-header" id="contact">
+				<h2>Contact</h2>
+			</div>
 			<form class="contact-form" action="index.html" method="post">
 				<div class="name-input">
 					<label for="name">Name</label>

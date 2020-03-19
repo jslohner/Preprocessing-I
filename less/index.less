@@ -67,64 +67,114 @@ html, body {
 
 // variables
 @main-font: 'Sen', sans-serif;
-// @main-color: rgb(102, 51, 153);
+@h2-font-size: 5rem;
 @main-color: #4169E1;
-// @main-color: #191970;
 @border-round: 6rem;
+
+// mixins
+.center() {
+	display: flex;
+	justify-content: center;
+}
+
+.column() {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.initialize-section() {
+	width: 80%;
+	font-family: @main-font;
+}
 
 // header
 header {
-	display: flex;
-	justify-content: center;
+	.center();
+
+
 
 	// nav bar
 	nav {
+		.initialize-section();
 		display: flex;
 		justify-content: space-between;
-		font-family: @main-font;
-		width: 80%;
 		padding: 1% 1%;
 		border-bottom: 2px solid black;
 
+		// media query
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		// links in nav bar
 		a {
-			text-decoration: none;
-			color: black;
-			font-size: 3rem;
+			align-items: center;
 			text-align: center;
-			background-color: @main-color;
-			width: 12%;
-			padding: 1% 1%;
-			border: 2px solid black;
-			border-radius: 1.8rem;
+
+			button {
+				color: black;
+				font-size: 3rem;
+				background-color: @main-color;
+				padding: 10%;
+				border: 2px solid black;
+				border-radius: 1.8rem;
+
+				// media query
+				// media query
+				@media( max-width: 500px ) {
+					margin: 5% 0%;
+				}
+			} // header button closing bracket
 		} // a tags closing bracket
 	} // nav bar closing bracket
 } // header closing bracket
 
 // top-container
 .top-container {
-	display: flex;
-	justify-content: center;
+	.center();
 	padding-top: 1%;
 
 	// top-content
 	.top-content {
-		display: flex;
-		flex-direction: column;
+		.column();
+		.initialize-section();
 		align-items: flex-start;
-		font-family: @main-font;
-		// background-color: rgb(211, 211, 211, 0.3);
 		background-color: @main-color;
 		border-radius: @border-round;
-		width: 80%;
 
 		// h1 Justin Lohner
 		h1 {
-			// align-self: center;
 			font-size: 14rem;
 			text-align: center;
 			padding: 5% 4% 4% 4%;
+
+			@media( max-width: 500px ) {
+				width: 100%;
+				font-size: 10rem;
+			}
 		} // h1 closing bracket
+
+		// actual image
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: @border-round;
+		} // img closing bracket
+
+		// intro paragraph
+		p {
+			font-size: 5rem;
+			width: 100%;
+			padding: 2%;
+			text-align: center;
+			line-height: 1.7;
+
+			@media( max-width: 500px ) {
+				width: 100%;
+				font-size: 1.5rem;
+			}
+		} // intro paragraph closing bracket
 
 		// intro
 		.intro {
@@ -137,37 +187,19 @@ header {
 				width: 60%;
 				padding: 1%;
 			} // image link closing bracket
-
-			// actual image
-			img {
-				width: 100%;
-				height: auto;
-				border-radius: @border-round;
-			} // img closing bracket
-
-			// intro paragraph
-			p {
-				font-size: 5rem;
-				width: 100%;
-				padding: 2%;
-				text-align: center;
-				line-height: 1.7;
-			} // intro paragraph closing bracket
 		} // intro closing bracket
 	} // top content closing bracket
 } // top container closing bracket
 
 // middle container
 .middle-container {
-	display: flex;
-	justify-content: center;
+	.center();
 
 	// middle content
 	.middle-content {
+		.initialize-section();
 		display: flex;
-		font-family: @main-font;
 		font-size: 3rem;
-		width: 80%;
 		padding-top: 1%;
 
 		// skills section
@@ -182,9 +214,13 @@ header {
 
 		// middle content h2
 		h2 {
-			font-size: 5rem;
+			font-size: @h2-font-size;
 			border-bottom: 4px solid @main-color;
 			margin-bottom: 2rem;
+
+			@media( max-width: 500px ) {
+				font-size: 2rem;
+			}
 		} // h2 closing bracket
 
 		// middle content div
@@ -195,10 +231,48 @@ header {
 		// middle content p
 		p {
 		} // middle content p closing bracket
+
+		@media( max-width: 500px ) {
+			width: 100%;
+			font-size: 1.5rem;
+		}
 	} // middle content closing bracket
 } // middle container closing bracket
 
 // footer
 footer {
-	
-}
+	.column();
+	align-items: center;
+	margin-top: 5%;
+
+	.contact-header {
+		width: 80%;
+		padding: 2% 1%;
+
+	} // contact section closing bracket
+
+	.contact-form {
+		.initialize-section();
+		display: flex;
+		justify-content: space-around;
+		font-size: 4rem;
+		padding: 5%;
+
+		@media( max-width: 500px ) {
+			font-size: 1.5rem;
+		}
+	}
+
+	// footer h2
+	h2 {
+		font-family: @main-font;
+		font-size: @h2-font-size;
+		border-bottom: 4px solid @main-color;
+
+		@media( max-width: 500px ) {
+			font-size: 2rem;
+		}
+	} // h2 closing tag
+
+
+} // footer closing bracket
