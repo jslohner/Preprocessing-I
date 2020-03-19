@@ -21,8 +21,8 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	// border: 0;
-	border: 1px solid grey;
+	border: 0;
+	// border: 1px solid grey;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -65,6 +65,13 @@ html, body {
 	height: 100%;
 }
 
+// variables
+@main-font: 'Sen', sans-serif;
+// @main-color: rgb(102, 51, 153);
+@main-color: #4169E1;
+// @main-color: #191970;
+@border-round: 6rem;
+
 // header
 header {
 	display: flex;
@@ -74,20 +81,22 @@ header {
 	nav {
 		display: flex;
 		justify-content: space-between;
+		font-family: @main-font;
 		width: 80%;
-		padding: 0.5%;
+		padding: 1% 1%;
 		border-bottom: 2px solid black;
 
 		// links in nav bar
 		a {
-			width: 10%;
-			padding: 1% 1%;
 			text-decoration: none;
 			color: black;
-			font-size: 2rem;
+			font-size: 3rem;
 			text-align: center;
+			background-color: @main-color;
+			width: 12%;
+			padding: 1% 1%;
 			border: 2px solid black;
-			border-radius: 2rem;
+			border-radius: 1.8rem;
 		} // a tags closing bracket
 	} // nav bar closing bracket
 } // header closing bracket
@@ -96,25 +105,54 @@ header {
 .top-container {
 	display: flex;
 	justify-content: center;
+	padding-top: 1%;
 
 	// top-content
 	.top-content {
 		display: flex;
 		flex-direction: column;
-		font-family: 'Sen', sans-serif;
-		// font-size: 5rem;
+		align-items: flex-start;
+		font-family: @main-font;
+		// background-color: rgb(211, 211, 211, 0.3);
+		background-color: @main-color;
+		border-radius: @border-round;
 		width: 80%;
-		// padding: 5% 0%;
-		background-color: rgb(211, 211, 211, 0.3);
 
 		// h1 Justin Lohner
 		h1 {
-			align-self: center;
-			// align-self: flex-start;
-			font-size: 15rem;
+			// align-self: center;
+			font-size: 14rem;
 			text-align: center;
-			padding: 2%;
-			width: 80%;
-		}
+			padding: 5% 4% 4% 4%;
+		} // h1 closing bracket
+
+		// intro
+		.intro {
+			display: flex;
+			align-items: center;
+			padding: 0% 1% 1% 1%;
+
+			// image link
+			.image {
+				width: 60%;
+				padding: 1%;
+			} // image link closing bracket
+
+			// actual image
+			img {
+				width: 100%;
+				height: auto;
+				border-radius: @border-round;
+			} // img closing bracket
+
+			// intro paragraph
+			p {
+				font-size: 5rem;
+				width: 100%;
+				padding: 2%;
+				text-align: center;
+				line-height: 1.7;
+			} // intro paragraph closing bracket
+		} // intro closing bracket
 	} // top-content closing bracket
 } // top-container closing bracket
