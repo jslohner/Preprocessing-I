@@ -1,19 +1,76 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Justin Lohner Resume</title>
 
-  <title>My Resume</title>
+		<link rel="stylesheet" href="css/index.css">
 
-  <link rel="stylesheet" href="css/index.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+	<body>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+		<header>
+			<nav>
+				<a href="index.html"><button type="button" name="home">Home</button></a>
+				<a href="#about"><button type="button" name="about">About</button></a>
+				<a href="https://jslohner.github.io/portfolio-website/"><button type="button" name="portfolio">Portfolio</button></a>
+				<a href="#contact"><button type="button" name="contact">Contact</button></a>
+			</nav>
+		</header>
+
+		<div class="top-container" id="about">
+			<div class="top-content">
+				<h1>Justin Lohner</h1>
+				<div class="intro">
+					<a href="https://jslohner.github.io/portfolio-website/" class="image"><img src="images/justin.jpg" alt="picture of the developer - Justin Lohner" /></a>
+					<p>I am a Software Developer and I love what I do. I continue to build my knowledge in coding by being a student at Lambda School and by working on new projects daily.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="middle-container">
+			<div class="middle-content">
+				<div class="skills">
+					<h2>Skills</h2>
+					<p>I am learning HTML, CSS, and JavaScript and I have some prior knowledge of Python. I have completed multiple projects since starting at Lambda School and I have worked on a few projects using Python.</p>
+				</div>
+
+				<div class="work">
+					<h2>Work History</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="contact-header" id="contact">
+				<h2>Contact</h2>
+			</div>
+			<div class="contact-info">
+				<p>Email - lohner4@gmail.com</p>
+				<p>Phone - (385) 241-0682</p>
+			</div>
+			<form class="contact-form" action="index.html" method="post">
+				<div class="name-input">
+					<!-- <label for="name">Name</label> -->
+					<input type="text" name="name" id="name" placeholder="Name"/>
+				</div>
+				<div class="email-input">
+					<!-- <label for="email">Email</label> -->
+					<input type="text" name="email" id="email" placeholder="Email">
+				</div>
+				<div class="message-input">
+					<!-- <label for="message">Message</label> -->
+					<input type="text" name="message" id="message" placeholder="Message">
+				</div>
+			</form>
+		</footer>
+
+	</body>
 </html>

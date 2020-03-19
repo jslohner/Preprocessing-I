@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+	v2.0 | 20110126
+	License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -13,19 +15,20 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	// border: 1px solid grey;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -50,10 +53,276 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 html, body {
-    height: 100%;
+	max-width: 100%;
+	height: 100%;
 }
 
+// variables
+@main-font: 'Sen', sans-serif;
+@h2-font-size: 5rem;
+@main-color: #4169E1;
+@border-round: 6rem;
+
+// mixins
+.center() {
+	display: flex;
+	justify-content: center;
+}
+
+.column() {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.initialize-section() {
+	width: 80%;
+	font-family: @main-font;
+}
+
+// header
+header {
+	.center();
+
+
+
+	// nav bar
+	nav {
+		.initialize-section();
+		display: flex;
+		justify-content: space-between;
+		padding: 1% 1%;
+		border-bottom: 2px solid black;
+
+		// media query
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		// links in nav bar
+		a {
+			align-items: center;
+			text-align: center;
+
+			button {
+				color: black;
+				font-size: 3rem;
+				background-color: @main-color;
+				padding: 10%;
+				border: 2px solid black;
+				border-radius: 1.8rem;
+				cursor: pointer;
+
+				&:hover {
+					background-color: lightcoral;
+				}
+
+				// media query
+				// media query
+				@media( max-width: 500px ) {
+					margin: 5% 0%;
+				}
+			} // header button closing bracket
+		} // a tags closing bracket
+	} // nav bar closing bracket
+} // header closing bracket
+
+// top-container
+.top-container {
+	.center();
+	padding-top: 1%;
+
+	// top-content
+	.top-content {
+		.column();
+		.initialize-section();
+		align-items: flex-start;
+		background-color: @main-color;
+		border-radius: @border-round;
+
+		// h1 Justin Lohner
+		h1 {
+			font-size: 14rem;
+			text-align: center;
+			padding: 5% 4% 4% 4%;
+
+			@media( max-width: 500px ) {
+				width: 100%;
+				font-size: 10rem;
+			}
+		} // h1 closing bracket
+
+		// actual image
+		img {
+			width: 100%;
+			height: auto;
+			border-radius: @border-round;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		} // img closing bracket
+
+		// intro paragraph
+		p {
+			font-size: 5rem;
+			width: 100%;
+			padding: 2%;
+			text-align: center;
+			line-height: 1.7;
+
+			@media( max-width: 500px ) {
+				width: 100%;
+				font-size: 1.5rem;
+			}
+		} // intro paragraph closing bracket
+
+		// intro
+		.intro {
+			display: flex;
+			align-items: center;
+			padding: 0% 1% 1% 1%;
+
+			// image link
+			.image {
+				width: 60%;
+				padding: 1%;
+			} // image link closing bracket
+		} // intro closing bracket
+	} // top content closing bracket
+} // top container closing bracket
+
+// middle container
+.middle-container {
+	.center();
+
+	// middle content
+	.middle-content {
+		.initialize-section();
+		display: flex;
+		font-size: 3rem;
+		padding-top: 1%;
+
+		// skills section
+		.skills {
+			border-right: 2px solid @main-color;
+		} // skills section closing bracket
+
+		// work section
+		.work {
+			border-left: 2px solid @main-color;
+		} // work section closing bracket
+
+		// middle content h2
+		h2 {
+			font-size: @h2-font-size;
+			border-bottom: 4px solid @main-color;
+			margin-bottom: 2rem;
+
+			@media( max-width: 500px ) {
+				font-size: 2rem;
+			}
+		} // h2 closing bracket
+
+		// middle content div
+		div {
+			padding: 0% 2% 2% 2%;
+		} // middle content div closing bracket
+
+		// middle content p
+		p {
+		} // middle content p closing bracket
+
+		@media( max-width: 500px ) {
+			font-size: 1.5rem;
+			width: 80%;
+			padding-top: 4%;
+		}
+	} // middle content closing bracket
+} // middle container closing bracket
+
+// footer
+footer {
+	.column();
+	align-items: center;
+	margin-top: 5%;
+
+	.contact-header {
+		width: 80%;
+		padding: 2% 1%;
+
+	} // contact section closing bracket
+
+	// developer contact info
+	.contact-info {
+		.column();
+		.initialize-section();
+		font-size: 4rem;
+		padding: 1%;
+
+		// contact info paragraph
+		p {
+			padding: 2% 0%;
+
+			@media( max-width: 500px ) {
+				font-size: 1.6rem;
+			}
+		} // contact info paragraph closing bracket
+	} // developer contact info closing bracket
+
+	.contact-form {
+		.initialize-section();
+		display: flex;
+		justify-content: space-between;
+		font-size: 4rem;
+		padding: 1%;
+		padding-bottom: 5%;
+		max-width: 100%;
+
+		// contact form div
+		div {
+			max-width: 100%;
+		} // contact form div closing bracket
+
+		@media( max-width: 500px ) {
+			font-size: 1.6rem;
+			padding: 4%;}
+	}
+
+	// footer h2
+	h2 {
+		font-family: @main-font;
+		font-size: @h2-font-size;
+		border-bottom: 4px solid @main-color;
+
+		@media( max-width: 500px ) {
+			font-size: 2rem;
+		}
+	} // h2 closing tag
+
+	// input
+	input {
+		color: @main-color;
+		font-size: 4rem;
+		border: 2px solid black;
+
+		@media( max-width: 500px ) {
+			font-size: 1.6rem;
+			padding: 4%;}
+			width: 80%;
+	} // input closing bracket
+
+	// input placeholder text
+	::placeholder {
+		color: @main-color;
+		opacity: 1;
+	} // placeholder text closing bracket
+} // footer closing bracket
